@@ -21,6 +21,7 @@ export default {
   name: 'app',
   data () {
     return {
+      // correction lesson 3
       // Second step, put products as attribute with an array of data
       // Third step, create a components folder in the src folder with its new files
       // Create two files which is ProductListOne.vue and ProductListTwo.vue
