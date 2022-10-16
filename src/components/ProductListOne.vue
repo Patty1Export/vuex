@@ -8,27 +8,24 @@
           <span class="price">{{product.price}}</span> <!--output product price-->
       </li>
     </ul>
-    <button v-on:click="reducePrice">Reduce Price</button>
+    <button v-on:click="reducePrice(4)">Reduce Price</button>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    products(){
-      //access the store
-      return this.$store.state.products;
+    computed: {
+      products(){
+        //access the store
+        return this.$store.state.products;
+      },
+      saleProducts(){
+        return this.$store.getters.saleProducts;
+      }
     },
-    saleProducts(){
-      return this.$store.getters.saleProducts;
-    }
-  },
-  methods: {
-    reducePrice: function(){
-			/*this.$store.state.products.forEach( product => {
-				product.price -= 1;
-			})*/
-			this.$store.commit('reducePrice');
+    methods: {
+      reducePrice: function(amount){
+      this.$store.dispatch('reducePrice', amount)//dispatching an action
 		}
 	}
 }
