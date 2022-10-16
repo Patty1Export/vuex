@@ -24,12 +24,12 @@ export default {
       // Second step, put products as attribute with an array of data
       // Third step, create a components folder in the src folder with its new files
       // Create two files which is ProductListOne.vue and ProductListTwo.vue
-        products: [
-          {name:'Banana Skin', price: 20 }, //these are the objects
-          {name:'Shiny Star', price: 40 },
-          {name:'Green Shells', price: 60 },
-          {name:'Red Shells', price: 80 },
-        ],
+        // products: [
+        //   {name:'Banana Skin', price: 20 }, //these are the objects
+        //   {name:'Shiny Star', price: 40 },
+        //   {name:'Green Shells', price: 60 },
+        //   {name:'Red Shells', price: 80 },
+        // ],
     }
   }
 }
