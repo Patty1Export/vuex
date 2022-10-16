@@ -13,10 +13,10 @@
 
 <script>
 export default {
-  props: ['products'],
-  data () {
-    return {
-
+  computed: {
+	  products(){
+		//access the store
+		return this.$store.state.products;
     }
   }
 }

@@ -13,11 +13,10 @@
 
 <script>
 export default {
-  //accept the data in the binds in the root components, used props
-  props: ['products'],//display the bind array products
-  data () {
-    return {
-
+  computed: {
+    products(){
+      //access the store
+      return this.$store.state.products;
     }
   }
 }

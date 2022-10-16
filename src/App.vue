@@ -2,8 +2,8 @@
   <div id="app">
       <!--First Step, Create a component in the App.vue-->
       <!--To passed the data, use v-bind in each of the components-->
-      <product-list-one v-bind:products="products"></product-list-one>
-      <product-list-two v-bind:products="products"></product-list-two>
+      <product-list-one ></product-list-one>
+      <product-list-two ></product-list-two>
   </div>
 </template>
 
