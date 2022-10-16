@@ -5,6 +5,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({ //passed an object
+  strict: true,
 	state:{ //these define the data in the state
 		products: [
     {name:'Banana Skin', price: 20 },
@@ -13,16 +14,25 @@ export const store = new Vuex.Store({ //passed an object
     {name:'Red Shells', price: 80 },
 	  ],
 	},
-    getters:{
-      saleProducts: state => {
-        // remove $this.store
-        var saleProducts = state.products.map(product => {
-          return{
-            name: '**' + product.name,
-            price: product.price / 2
-          }
-        });
-        return saleProducts;
-      }
+  getters:{
+    saleProducts: state => {
+      // remove $this.store
+      var saleProducts = state.products.map(product => {
+        return{
+          name: '**' + product.name,
+          price: product.price / 2
+        }
+      });
+      return saleProducts;
     }
+  },
+  mutations: {
+    reducePrice: state => {
+      //Add the copied code
+      //remove this.$store
+      state.products.forEach( product => {
+        product.price -= 1;
+      })
+    }
+  }
 })
