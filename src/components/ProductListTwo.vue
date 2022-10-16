@@ -3,7 +3,7 @@
     <h2>Product List Two</h2>
     <ul>
          <!--loop data using v-for-->
-      <li v-for="product in products">
+      <li v-for="product in saleProducts">
           <span class="name">{{product.name}}</span>
           <span class="price">{{product.price}}</span>
       </li>
@@ -16,7 +16,10 @@ export default {
   computed: {
 	  products(){
 		//access the store
-		return this.$store.state.products;
+		  return this.$store.state.products;
+    },
+    saleProducts(){
+      return this.$store.getters.saleProducts;
     }
   }
 }
