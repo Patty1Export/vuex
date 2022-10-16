@@ -1,7 +1,8 @@
 <template>
-  <div id="product-list-two">
+  <div id="product-list-two"> <!--Create id for ProductListOne.vue which is product-list-one-->
     <h2>Product List Two</h2>
     <ul>
+         <!--loop data using v-for-->
       <li v-for="product in products">
           <span class="name">{{product.name}}</span>
           <span class="price">{{product.price}}</span>
@@ -20,7 +21,7 @@ export default {
   }
 }
 </script>
-
+<!--Style for product list two -->
 <style scoped>
 #product-list-two{
   background: #D1E4FF;
